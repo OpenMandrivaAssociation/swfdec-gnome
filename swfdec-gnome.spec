@@ -12,6 +12,7 @@ Release: %{release}
 Source0: http://download.gnome.org/sources/swfdec-gnome/%{name}-%{version}.tar.bz2
 License: GPL
 Group: Graphical desktop/GNOME
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Url: http://swfdec.freedesktop.org/
 BuildRequires: swfdec-devel >= %{swfdec_version}
 BuildRequires: libGConf2-devel
