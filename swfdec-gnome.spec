@@ -1,15 +1,15 @@
 %define name swfdec-gnome
-%define version 2.21.90
-%define swfdec_version 0.5.90
+%define version 2.21.91
+%define swfdec_version 0.6.0
 
-%define major 0.5
+%define major 0.6
 %define release %mkrel 1
 
 Summary: Flash integration for the Gnome Desktop
 Name: %{name}
-Version: 2.21.90
+Version: %{version}
 Release: %{release}
-Source0: http://download.gnome.org/sources/swfdec-gnome/%{name}-%{version}.tar.bz2
+Source0: http://download.gnome.org/sources/swfdec-gnome/%{name}-%{version}.tar.gz
 License: GPL
 Group: Graphical desktop/GNOME
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
