@@ -1,16 +1,15 @@
 %define name swfdec-gnome
-%define version 2.21.91
+%define version 2.22.2
 %define swfdec_version 0.6.0
 
-%define major 0.6
 %define release %mkrel 1
 
 Summary: Flash integration for the Gnome Desktop
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://download.gnome.org/sources/swfdec-gnome/%{name}-%{version}.tar.gz
-License: GPL
+Source0: http://download.gnome.org/sources/swfdec-gnome/%{name}-%{version}.tar.bz2
+License: GPLv2+
 Group: Graphical desktop/GNOME
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Url: http://swfdec.freedesktop.org/
@@ -27,12 +26,12 @@ It contains a standalone Flash player and a thumbnailer.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x --disable-schemas-install
 %make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 
 %find_lang %{name}
 
@@ -46,6 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %preun
 %preun_uninstall_gconf_schemas swfdec-thumbnailer
+
 %postun
 %{clean_menus}
 %{clean_desktop_database}
