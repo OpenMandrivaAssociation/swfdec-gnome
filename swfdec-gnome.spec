@@ -38,17 +38,21 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%if %mdkversion < 200900
 %post
 %post_install_gconf_schemas swfdec-thumbnailer
 %{update_menus}
 %{update_desktop_database}
+%endif
 
 %preun
 %preun_uninstall_gconf_schemas swfdec-thumbnailer
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
 %{clean_desktop_database}
+%endif
 
 %files -f %{name}.lang
 %defattr(-,root,root)
