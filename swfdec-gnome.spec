@@ -1,6 +1,6 @@
 %define name swfdec-gnome
-%define version 2.22.2
-%define swfdec_version 0.6.0
+%define version 2.23.2
+%define swfdec_version 0.7.4
 
 %define release %mkrel 1
 
@@ -16,7 +16,7 @@ Url: http://swfdec.freedesktop.org/
 BuildRequires: swfdec-devel >= %{swfdec_version}
 BuildRequires: libGConf2-devel
 BuildRequires: gtk2-devel >= 2.12.0
-BuildRequires: perl-XML-Parser
+BuildRequires: intltool
 
 %description
 Swfdec-Gnome provides tools to integrate Flash into the GNOME desktop.
@@ -43,6 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %post_install_gconf_schemas swfdec-thumbnailer
 %{update_menus}
 %{update_desktop_database}
+%update_icon_cache hicolor
 %endif
 
 %preun
@@ -52,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %postun
 %{clean_menus}
 %{clean_desktop_database}
+%clean_icon_cache hicolor
 %endif
 
 %files -f %{name}.lang
@@ -62,3 +64,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/swfdec-player.desktop
 %{_datadir}/swfdec-gnome/swfdec-player.ui
 %{_mandir}/man1/*
+%_datadir/icons/hicolor/*/apps/*
