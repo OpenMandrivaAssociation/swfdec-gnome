@@ -8,7 +8,7 @@ Summary: Flash integration for the Gnome Desktop
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://download.gnome.org/sources/swfdec-gnome/%{name}-%{version}.tar.bz2
+Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 License: GPLv2+
 Group: Graphical desktop/GNOME
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
