@@ -1,8 +1,8 @@
 %define name swfdec-gnome
-%define version 2.26.0
+%define version 2.28.0
 %define swfdec_version 0.8.0
 
-%define release %mkrel 2
+%define release %mkrel 1
 
 Summary: Flash integration for the Gnome Desktop
 Name: %{name}
