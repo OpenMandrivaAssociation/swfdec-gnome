@@ -1,5 +1,5 @@
 %define name swfdec-gnome
-%define version 2.28.0
+%define version 2.30.0
 %define swfdec_version 0.8.0
 
 %define release %mkrel 1
