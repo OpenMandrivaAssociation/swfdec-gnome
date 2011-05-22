@@ -2,7 +2,7 @@
 %define version 2.30.1
 %define swfdec_version 0.8.0
 
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Flash integration for the Gnome Desktop
 Name: %{name}
