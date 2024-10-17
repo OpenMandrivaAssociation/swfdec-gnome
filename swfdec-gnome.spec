@@ -12,7 +12,7 @@ Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 License: GPLv2+
 Group: Graphical desktop/GNOME
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Url: http://swfdec.freedesktop.org/
+Url: https://swfdec.freedesktop.org/
 BuildRequires: swfdec-devel >= %{swfdec_version}
 BuildRequires: libGConf2-devel
 BuildRequires: gtk2-devel >= 2.12.0
