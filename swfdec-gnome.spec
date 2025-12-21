@@ -13,6 +13,11 @@ License: GPLv2+
 Group: Graphical desktop/GNOME
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Url: https://swfdec.freedesktop.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: swfdec-devel >= %{swfdec_version}
 BuildRequires: libGConf2-devel
 BuildRequires: gtk2-devel >= 2.12.0
